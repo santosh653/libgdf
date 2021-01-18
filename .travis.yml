@@ -17,8 +17,17 @@ env:
 matrix:
   include:
     - env: CUDA=9.2.148_396.37
+      arch: amd64
     - env: CUDA=9.2.148_396.37 BUILD_CFFI=1 PYTHON=3.6
+      arch: amd64
     - env: CUDA=9.2.148_396.37 BUILD_CFFI=1 PYTHON=3.5
+      arch: amd64
+    - env: CUDA=9.2.148_396.37
+      arch: ppc64le
+    - env: CUDA=9.2.148_396.37 BUILD_CFFI=1 PYTHON=3.6
+      arch: ppc64le
+    - env: CUDA=9.2.148_396.37 BUILD_CFFI=1 PYTHON=3.5
+      arch: ppc64le
 
 before_install:
   # install libboost
